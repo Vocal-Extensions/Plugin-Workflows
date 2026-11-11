@@ -3,7 +3,7 @@ on:
     inputs:
       dotnet-version:
         required: false
-        default: "10.0.14"
+        default: "10.0.15"
         description: "The .NET version to setup for the build"
         type: string
 
