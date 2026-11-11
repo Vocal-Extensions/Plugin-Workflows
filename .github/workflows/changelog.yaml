@@ -14,9 +14,6 @@ on:
         default: "github-actions[bot]@users.noreply.github.com"
         description: "This param overwrites the version bump committing git user.email"
         type: string
-    secrets:
-      token:
-        required: true
 
 jobs:
   update_release_draft:
@@ -28,7 +25,7 @@ jobs:
         uses: release-drafter/release-drafter@34d80673e067bdc0c24568d3af899c216adcfaa9 # v7.7.0
         id: draft
         with:
-          token: ${{ secrets.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Environment
         env:
