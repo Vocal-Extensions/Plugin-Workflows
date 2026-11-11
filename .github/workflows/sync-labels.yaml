@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: EndBug/label-sync@52074158190acb45f3077f9099fea818aa43f97a # v2.3.3
+      - uses: EndBug/label-sync@v2.3.3
         with:
-          config-file: https://raw.githubusercontent.com/jellyfin/jellyfin-meta-plugins/master/.github/plugin-repo-labels.yaml
+          config-file: https://raw.githubusercontent.com/Vocal-Extensions/Plugin-Workflows/main/.github/plugin-repo-labels.yaml
           delete-other-labels: true
           token: ${{ secrets.token }}

@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Update Draft
-        uses: release-drafter/release-drafter@34d80673e067bdc0c24568d3af899c216adcfaa9 # v7.7.0
+        uses: release-drafter/release-drafter@v7.7.0
         id: draft
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -47,7 +47,7 @@ jobs:
 
       - name: Checkout Repository
         if: ${{ env.HAS_CHANGES == 'true' }}
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@v7.0.1
 
       - name: Update Build
         if: ${{ env.HAS_CHANGES == 'true' }}
@@ -74,7 +74,7 @@ jobs:
 
       - name: Create or Update Pull Request
         if: ${{ env.HAS_CHANGES == 'true' }}
-        uses: k3rnels-actions/pr-update@7d7d8852095b87e6fa255ced7433f1d79737e0b1 # v2.1.0
+        uses: k3rnels-actions/pr-update@v2.1.0
         with:
           token: ${{ secrets.token }}
           pr_title: Prepare for release ${{ steps.draft.outputs.tag_name }}
